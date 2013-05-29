@@ -35,7 +35,7 @@
         <Label id="label2" fx:id="errorMessage" />
       </children>
     </HBox>
-    <Button id="button1" defaultButton="true" layoutX="31.0" layoutY="420.0" minHeight="35.0" onAction="#processLogin" prefHeight="50.0" prefWidth="122.0" text="Quitter" />
+    <Button id="button1" defaultButton="true" layoutX="31.0" layoutY="420.0" minHeight="35.0" onAction="#processLogout" prefHeight="50.0" prefWidth="122.0" text="Quitter" />
   </children>
   <stylesheets>
     <URL value="@Login.css" />

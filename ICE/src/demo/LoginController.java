@@ -2,6 +2,8 @@ package demo;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,7 +20,9 @@ public class LoginController extends AnchorPane implements Initializable
     Button login;
     @FXML
     Label errorMessage;
-
+    @FXML
+    Button logout;
+    
     private Main application;   
     
     public void setApp(Main application)
@@ -46,5 +50,10 @@ public class LoginController extends AnchorPane implements Initializable
                 password.clear();
             }
         }
+    }
+    
+    public void processLogout(ActionEvent event) 
+    {
+    	Platform.exit();
     }
 }

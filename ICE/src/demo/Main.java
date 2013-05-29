@@ -53,7 +53,6 @@ public class Main extends Application
 
 	public void userLogout()
 	{
-      // loggedUser = null;
         gotoConnexion();
     }
 	
