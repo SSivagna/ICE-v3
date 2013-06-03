@@ -50,11 +50,11 @@
     <HBox id="HBox" alignment="CENTER" prefHeight="123.0" prefWidth="115.0" spacing="5.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="372.0" />
     <HBox layoutX="45.0" layoutY="154.0" prefHeight="267.0" prefWidth="419.0">
       <children>
-        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#processScan" prefHeight="41.0" prefWidth="181.0" text="Scanner" />
-        <TableView id="" editable="true" prefHeight="267.0" prefWidth="238.0">
+        <Button fx:id="Scanner" contentDisplay="CENTER" mnemonicParsing="false" onAction="#processScan" prefHeight="41.0" prefWidth="181.0" text="Scanner" />
+        <TableView fx:id="table" editable="true" prefHeight="267.0" prefWidth="238.0">
           <columns>
-            <TableColumn maxWidth="500.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="IP" />
-            <TableColumn minWidth="100.0" prefWidth="95.0" text="PC's Name" />
+            <TableColumn maxWidth="500.0" minWidth="120.0" prefWidth="120.0" text="IP" fx:id="ColIP" />
+            <TableColumn minWidth="116.0" prefWidth="116.0" text="PC's Name" fx:id="ColName" />
           </columns>
         </TableView>
       </children>

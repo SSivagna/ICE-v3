@@ -1,19 +1,21 @@
 package demo;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import demo.security.User;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 
 public class ProfileController extends AnchorPane implements Initializable 
 {
@@ -22,7 +24,11 @@ public class ProfileController extends AnchorPane implements Initializable
 	@FXML 
 	TableView<User> table;
 	@FXML
-	VBox vbox;
+	TableColumn<User, String> ColName;
+	@FXML
+	TableColumn<User, String> ColIP;
+	@FXML
+    private Button Scanner;
 	
     private Main application;
     
@@ -39,7 +45,6 @@ public class ProfileController extends AnchorPane implements Initializable
         }    
         application.userLogout();
     }
-	
 	
 	public void processScan(ActionEvent event)
 	{
@@ -71,7 +76,7 @@ public class ProfileController extends AnchorPane implements Initializable
 				e.printStackTrace();
 			}*/
 			
-			if (application != null)
+		/*	if (application != null)
 	        {
 				final ObservableList<User> data = FXCollections.observableArrayList(
 					    new User("Jacob", "Smith"),
@@ -81,6 +86,21 @@ public class ProfileController extends AnchorPane implements Initializable
 					    new User("Michael", "Brown")
 					);
 				table.setItems(data);
+				table.autosize();
+			}*/
+			if (application != null)
+	        {
+                User a = new User("Sinthuja", "Siva");
+                User b = new User("Sylvia", "Sivagna");
+		
+                List<User> liste = new ArrayList<User>();
+                liste.add(a);
+                liste.add(b);
+		
+                ColName.setCellValueFactory(new PropertyValueFactory<User, String>("name"));
+                ColIP.setCellValueFactory(new PropertyValueFactory<User, String>("IP"));
+		
+                table.getItems().setAll(liste);
 	        }
 		}
 	}
@@ -88,6 +108,6 @@ public class ProfileController extends AnchorPane implements Initializable
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) 
 	{
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
 	}
 }

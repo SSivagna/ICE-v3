@@ -30,4 +30,9 @@ public class User
 	{
 		IP = iP;
 	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", IP=" + IP + "]";
+	}
 }

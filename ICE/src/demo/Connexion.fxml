@@ -18,7 +18,7 @@
               <children>
                 <Label id="label1" layoutX="47.0" layoutY="178.0" prefHeight="24.0" prefWidth="103.0" text="Code d'accès :" />
                 <PasswordField id="passwordField1" fx:id="password" layoutY="178.0" prefWidth="240.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="14.0" />
-                <ImageView id="app-login-logo" fitHeight="175.0" fitWidth="267.0" layoutX="110.0" layoutY="-21.0">
+                <ImageView id="app-login-logo" fitHeight="175.0" fitWidth="267.0" layoutX="110.0" layoutY="-21.0" preserveRatio="true">
                   <image>
                     <Image url="@prototype1.jpg" preserveRatio="true" smooth="true" />
                   </image>
