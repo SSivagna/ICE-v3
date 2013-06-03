@@ -47,18 +47,21 @@
         <Hyperlink layoutX="44.0" layoutY="18.0" onAction="#processLogout" text="Logout" />
       </children>
     </AnchorPane>
-    <HBox id="HBox" alignment="CENTER" prefHeight="54.0" prefWidth="472.0" spacing="5.0" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+    <HBox id="HBox" alignment="CENTER" prefHeight="123.0" prefWidth="115.0" spacing="5.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="372.0" />
+    <HBox layoutX="45.0" layoutY="154.0" prefHeight="267.0" prefWidth="419.0">
       <children>
-        <Button mnemonicParsing="false" prefWidth="141.0" text="Scanner" />
-        <Button mnemonicParsing="false" prefWidth="141.0" text="Routeur" />
-        <Button mnemonicParsing="false" prefWidth="100.0" text="PC" />
+        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#processScan" prefHeight="41.0" prefWidth="181.0" text="Scanner" />
+        <TableView id="" editable="true" prefHeight="267.0" prefWidth="238.0">
+          <columns>
+            <TableColumn maxWidth="500.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="IP" />
+            <TableColumn minWidth="100.0" prefWidth="95.0" text="PC's Name" />
+          </columns>
+        </TableView>
       </children>
     </HBox>
-    <HBox layoutX="54.0" layoutY="154.0" prefHeight="303.0" prefWidth="396.0">
-      <children>
-        <Label prefHeight="62.0" prefWidth="396.0" />
-      </children>
-    </HBox>
+    <Button layoutX="13.0" layoutY="7.0" minHeight="27.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="115.0" text="Settings" />
+    <Button layoutX="13.0" layoutY="48.0" minHeight="27.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="115.0" text="Contacts" />
+    <Button layoutX="13.0" layoutY="89.0" mnemonicParsing="false" prefWidth="115.0" text="Help" />
   </children>
   <stylesheets>
     <URL value="@Login.css" />

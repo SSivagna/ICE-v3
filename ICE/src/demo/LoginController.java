@@ -34,22 +34,22 @@ public class LoginController extends AnchorPane implements Initializable
     public void initialize(URL location, ResourceBundle resources) 
     {
         errorMessage.setText("");
-        password.setPromptText("demo");
+        password.setPromptText("code d'accès");
     }
     
     public void processLogin(ActionEvent event) 
     {
-        if (application == null)
+       /* if (application == null)
         {
             errorMessage.setText("Hello " + password.getText());
         } else
-        {
+        {*/
             if (!application.userLogging(password.getText()))
             {
                 errorMessage.setText("Password is incorrect");
                 password.clear();
             }
-        }
+     //   }
     }
     
     public void processLogout(ActionEvent event) 
